@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace TeamProjectTracker
         /// <summary>
         /// The unique identification number for a specific product
         /// </summary>
+        [Key]
         public int ProductId { get; set; }
 
         /// <summary>
