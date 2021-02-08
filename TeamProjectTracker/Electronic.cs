@@ -34,5 +34,10 @@ namespace TeamProjectTracker
         /// The category to which the product belongs to
         /// </summary>
         public string Category { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
