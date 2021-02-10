@@ -9,11 +9,6 @@ namespace TeamProjectTracker
 {
     public class Electronic
     {
-        public Electronic()
-        {
-            Distributors = new HashSet<Distributor>();
-        }
-
         /// <summary>
         /// The unique identification number for a specific product
         /// </summary>

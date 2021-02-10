@@ -73,6 +73,10 @@
     <Compile Include="Migrations\202102020318423_Initial.designer.cs">
       <DependentUpon>202102020318423_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102100521594_DistributorTable.cs" />
+    <Compile Include="Migrations\202102100521594_DistributorTable.designer.cs">
+      <DependentUpon>202102100521594_DistributorTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102020318423_Initial.resx">
       <DependentUpon>202102020318423_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102100521594_DistributorTable.resx">
+      <DependentUpon>202102100521594_DistributorTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

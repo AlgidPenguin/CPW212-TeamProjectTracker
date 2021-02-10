@@ -25,10 +25,6 @@ namespace TeamProjectTracker
 
         public virtual DbSet<Distributor> Distributors { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-
-        }
     }
 
     //public class MyEntity
