@@ -9,6 +9,11 @@ namespace TeamProjectTracker
 {
     public class Electronic
     {
+        public Electronic()
+        {
+            Distributors = new HashSet<Distributor>();
+        }
+
         /// <summary>
         /// The unique identification number for a specific product
         /// </summary>
@@ -34,6 +39,8 @@ namespace TeamProjectTracker
         /// The category to which the product belongs to
         /// </summary>
         public string Category { get; set; }
+
+        public virtual ICollection<Distributor> Distributor { get; set; }
 
         public override string ToString()
         {

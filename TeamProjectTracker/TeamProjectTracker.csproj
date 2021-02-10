@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Distributor.cs" />
     <Compile Include="Electronic.cs" />
     <Compile Include="ElectronicDb.cs" />
     <Compile Include="Form1.cs">
