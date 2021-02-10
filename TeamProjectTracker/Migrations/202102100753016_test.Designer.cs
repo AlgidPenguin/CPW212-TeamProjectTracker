@@ -7,13 +7,13 @@ namespace TeamProjectTracker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class DistributorTable : IMigrationMetadata
+    public sealed partial class test : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DistributorTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(test));
         
         string IMigrationMetadata.Id
         {
-            get { return "202102100521594_DistributorTable"; }
+            get { return "202102100753016_test"; }
         }
         
         string IMigrationMetadata.Source

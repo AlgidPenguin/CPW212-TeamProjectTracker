@@ -38,50 +38,57 @@ namespace TeamProjectTracker
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(81, 12);
+            this.listBox1.Location = new System.Drawing.Point(61, 10);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(234, 276);
+            this.listBox1.Size = new System.Drawing.Size(176, 225);
             this.listBox1.TabIndex = 0;
             // 
             // addElectCmd
             // 
-            this.addElectCmd.Location = new System.Drawing.Point(360, 12);
+            this.addElectCmd.Location = new System.Drawing.Point(270, 10);
+            this.addElectCmd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addElectCmd.Name = "addElectCmd";
-            this.addElectCmd.Size = new System.Drawing.Size(133, 68);
+            this.addElectCmd.Size = new System.Drawing.Size(100, 55);
             this.addElectCmd.TabIndex = 1;
             this.addElectCmd.Text = "Add Electronics";
             this.addElectCmd.UseVisualStyleBackColor = true;
+            this.addElectCmd.Click += new System.EventHandler(this.addElectCmd_Click);
             // 
             // updateElectCmd
             // 
-            this.updateElectCmd.Location = new System.Drawing.Point(360, 112);
+            this.updateElectCmd.Location = new System.Drawing.Point(270, 91);
+            this.updateElectCmd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateElectCmd.Name = "updateElectCmd";
-            this.updateElectCmd.Size = new System.Drawing.Size(133, 69);
+            this.updateElectCmd.Size = new System.Drawing.Size(100, 56);
             this.updateElectCmd.TabIndex = 2;
             this.updateElectCmd.Text = "Update Electronics";
             this.updateElectCmd.UseVisualStyleBackColor = true;
+            this.updateElectCmd.Click += new System.EventHandler(this.updateElectCmd_Click);
             // 
             // deleteElectCmd
             // 
-            this.deleteElectCmd.Location = new System.Drawing.Point(360, 213);
+            this.deleteElectCmd.Location = new System.Drawing.Point(270, 173);
+            this.deleteElectCmd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteElectCmd.Name = "deleteElectCmd";
-            this.deleteElectCmd.Size = new System.Drawing.Size(133, 75);
+            this.deleteElectCmd.Size = new System.Drawing.Size(100, 61);
             this.deleteElectCmd.TabIndex = 3;
             this.deleteElectCmd.Text = "Delete Electronics";
             this.deleteElectCmd.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.deleteElectCmd);
             this.Controls.Add(this.updateElectCmd);
             this.Controls.Add(this.addElectCmd);
             this.Controls.Add(this.listBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
