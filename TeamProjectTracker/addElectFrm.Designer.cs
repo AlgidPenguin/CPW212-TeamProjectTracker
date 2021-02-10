@@ -113,6 +113,7 @@ namespace TeamProjectTracker
             this.addElectCmd.TabIndex = 9;
             this.addElectCmd.Text = "Add Electronic";
             this.addElectCmd.UseVisualStyleBackColor = true;
+            this.addElectCmd.Click += new System.EventHandler(this.addElectCmd_Click);
             // 
             // addElectFrm
             // 

@@ -12,8 +12,6 @@ namespace TeamProjectTracker
         [Key]
         public int DistibutorID { get; set; }
 
-        public string ProductId { get; set; }
-
         public string DistributorName { get; set; }
 
         public int Stock { get; set; }
