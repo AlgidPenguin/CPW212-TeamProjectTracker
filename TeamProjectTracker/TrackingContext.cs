@@ -22,6 +22,9 @@ namespace TeamProjectTracker
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Electronic> Electronics { get; set; }
+
+        public virtual DbSet<Distributor> Distributors { get; set; }
+
     }
 
     //public class MyEntity

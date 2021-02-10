@@ -66,6 +66,7 @@
     <Compile Include="addElectFrm.Designer.cs">
       <DependentUpon>addElectFrm.cs</DependentUpon>
     </Compile>
+	<Compile Include="Distributor.cs" />
     <Compile Include="Electronic.cs" />
     <Compile Include="ElectronicDb.cs" />
     <Compile Include="Form1.cs">
@@ -77,6 +78,10 @@
     <Compile Include="Migrations\202102020318423_Initial.cs" />
     <Compile Include="Migrations\202102020318423_Initial.designer.cs">
       <DependentUpon>202102020318423_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102100521594_DistributorTable.cs" />
+    <Compile Include="Migrations\202102100521594_DistributorTable.designer.cs">
+      <DependentUpon>202102100521594_DistributorTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -90,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102020318423_Initial.resx">
       <DependentUpon>202102020318423_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102100521594_DistributorTable.resx">
+      <DependentUpon>202102100521594_DistributorTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
