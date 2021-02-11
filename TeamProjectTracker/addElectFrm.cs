@@ -53,6 +53,7 @@ namespace TeamProjectTracker
                 existingElec.Category = categoryTxt.Text;
 
                 ElectronicDb.Update(existingElec);
+                MessageBox.Show("Successfully updated item " + existingElec.Name);
             }
 
             Close();
