@@ -17,6 +17,8 @@ namespace TeamProjectTracker
             InitializeComponent();
         }
 
+        Electronic existingElec;
+
         public addElectFrm(Electronic electronic)
         {
             InitializeComponent();
@@ -27,22 +29,33 @@ namespace TeamProjectTracker
 
             addElectCmd.Text = "Update Electronic";
             this.Text = "Update " + electronic.Name;
-            
 
-            ElectronicDb.Update(electronic);
+            existingElec = electronic;
         }
 
         private void addElectCmd_Click(object sender, EventArgs e)
         {
-            Electronic electToAdd = new Electronic();
-            electToAdd.Name = nameTxt.Text;
-            electToAdd.Manufacturer = manufactTxt.Text;
-            electToAdd.Price = Convert.ToDouble(priceTxt.Text);
-            electToAdd.Category = categoryTxt.Text;
+            if (existingElec == null)
+            {
+                Electronic electToAdd = new Electronic();
+                electToAdd.Name = nameTxt.Text;
+                electToAdd.Manufacturer = manufactTxt.Text;
+                electToAdd.Price = Convert.ToDouble(priceTxt.Text);
+                electToAdd.Category = categoryTxt.Text;
 
-            ElectronicDb.Add(electToAdd);
+                ElectronicDb.Add(electToAdd);
+            }
+            else
+            {
+                existingElec.Name = nameTxt.Text;
+                existingElec.Manufacturer = manufactTxt.Text;
+                existingElec.Price = Convert.ToDouble(priceTxt.Text);
+                existingElec.Category = categoryTxt.Text;
 
+                ElectronicDb.Update(existingElec);
+            }
 
+            Close();
         }
     }
 }
