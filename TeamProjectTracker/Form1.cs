@@ -17,12 +17,21 @@ namespace TeamProjectTracker
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
             List<Electronic> allElectronics = ElectronicDb.GetAllElectronics();
             populateList(allElectronics);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="allElectronics"></param>
         private void populateList(List<Electronic> allElectronics)
         {
             listBox1.Items.Clear();
@@ -32,6 +41,11 @@ namespace TeamProjectTracker
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addElectCmd_Click(object sender, EventArgs e)
         {
             addElectFrm addForm = new addElectFrm();
@@ -41,6 +55,11 @@ namespace TeamProjectTracker
             populateList(allElectronics);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void updateElectCmd_Click(object sender, EventArgs e)
         {
             if ( listBox1.SelectedIndex < 0 )
@@ -56,6 +75,11 @@ namespace TeamProjectTracker
             populateList(ElectronicDb.GetAllElectronics());
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void deleteElectCmd_Click(object sender, EventArgs e)
         {
             if( listBox1.SelectedIndex < 0 )
