@@ -17,12 +17,21 @@ namespace TeamProjectTracker
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
             List<Electronic> allElectronics = ElectronicDb.GetAllElectronics();
             populateList(allElectronics);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="allElectronics"></param>
         private void populateList(List<Electronic> allElectronics)
         {
             listBox1.Items.Clear();
@@ -32,6 +41,11 @@ namespace TeamProjectTracker
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addElectCmd_Click(object sender, EventArgs e)
         {
             addElectFrm addForm = new addElectFrm();
@@ -41,13 +55,51 @@ namespace TeamProjectTracker
             populateList(allElectronics);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void updateElectCmd_Click(object sender, EventArgs e)
         {
+            if ( listBox1.SelectedIndex < 0 )
+            {
+                MessageBox.Show("You must choose a product to update.");
+                return;
+            }
+
             Electronic electToUpdate = listBox1.SelectedItem as Electronic;
             addElectFrm updateForm = new addElectFrm(electToUpdate);
             updateForm.ShowDialog();
 
             populateList(ElectronicDb.GetAllElectronics());
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void deleteElectCmd_Click(object sender, EventArgs e)
+        {
+            if( listBox1.SelectedIndex < 0 )
+            {
+                MessageBox.Show("You must select a product to delete.");
+                return;
+            }
+
+            Electronic elecToDelete = listBox1.SelectedItem as Electronic;
+
+            DialogResult result = MessageBox.Show(
+                                    text: $"Are you sure you want to delete {elecToDelete.ProductId}:{elecToDelete.Manufacturer}:{elecToDelete.Name}",
+                                    caption: "Delete?",
+                                    buttons: MessageBoxButtons.YesNo,
+                                    icon: MessageBoxIcon.Warning);
+            if( result == DialogResult.Yes)
+            {
+                ElectronicDb.Delete(elecToDelete.ProductId);
+                populateList(ElectronicDb.GetAllElectronics());
+            }
         }
     }
 }
