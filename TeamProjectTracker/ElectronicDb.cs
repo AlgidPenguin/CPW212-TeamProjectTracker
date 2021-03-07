@@ -32,7 +32,7 @@ namespace TeamProjectTracker
             {
                 List<String> allCategories =
                     (from elect in context.Electronics
-                     select elect.Category).ToList();
+                     select elect.Category).Distinct().ToList();
 
                 return allCategories;
             }
