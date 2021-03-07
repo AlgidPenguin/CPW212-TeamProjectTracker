@@ -26,6 +26,18 @@ namespace TeamProjectTracker
             }
         }
 
+        public static List<String> GetAllCategories()
+        {
+            using(TrackingContext context = new TrackingContext())
+            {
+                List<String> allCategories =
+                    (from elect in context.Electronics
+                     select elect.Category).ToList();
+
+                return allCategories;
+            }
+        }
+
         /// <summary>
         /// Adds a new electronic into the database
         /// </summary>
