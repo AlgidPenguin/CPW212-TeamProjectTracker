@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace TeamProjectTracker
 {
+    /// <summary>
+    /// This form is used for both the Add Electronic and Update Electronic.
+    /// </summary>
     public partial class addElectFrm : Form
     {
         public addElectFrm()
@@ -17,8 +20,16 @@ namespace TeamProjectTracker
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This variable is used to determine whether an electronic is new or not.
+        /// </summary>
         Electronic existingElec;
 
+        /// <summary>
+        /// Populates the form with the current electronic's data, if it exists.
+        /// Then sets the variable existingElec to be the electronic that was passed in.
+        /// </summary>
+        /// <param name="electronic"></param>
         public addElectFrm(Electronic electronic)
         {
             InitializeComponent();
@@ -33,6 +44,11 @@ namespace TeamProjectTracker
             existingElec = electronic;
         }
 
+        /// <summary>
+        /// When the user clicks the Add Electronic button, if the variable existingElec
+        /// is null it means the electronic being added is a new one so it is added to the database.
+        /// If it is not null, it already exists in the database and is being updated instead.
+        /// </summary>
         private void addElectCmd_Click(object sender, EventArgs e)
         {
             if (existingElec == null)

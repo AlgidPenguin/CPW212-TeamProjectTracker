@@ -18,10 +18,9 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// When the form loads, call a method to get all the electronics from the database
+        /// and populate the listbox with them.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
             List<Electronic> allElectronics = ElectronicDb.GetAllElectronics();
@@ -29,9 +28,9 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// Populate the listbox with the list that is passed in.
         /// </summary>
-        /// <param name="allElectronics"></param>
+        /// <param name="allElectronics">The list used to populate the listbox</param>
         private void populateList(List<Electronic> allElectronics)
         {
             listBox1.Items.Clear();
@@ -42,10 +41,9 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// When the Add Electronics button is clicked, open up a new form
+        /// and then repopulate the list when it is closed.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void addElectCmd_Click(object sender, EventArgs e)
         {
             addElectFrm addForm = new addElectFrm();
@@ -56,10 +54,12 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// When the Update Electronic button is pressed, open up a new form
+        /// with the information of that electronic already populated. The user may
+        /// then update any information regarding the electronic. After closing,
+        /// the listbox is once again repopulated. Displays an error
+        /// message if there is no electronic selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void updateElectCmd_Click(object sender, EventArgs e)
         {
             if ( listBox1.SelectedIndex < 0 )
@@ -76,10 +76,12 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// When the Delete Electronic button is pressed, a message box is 
+        /// presented that prompts the user whether to actually delete the electronic or not.
+        /// If yes is clicked, then the electronic is deleted from the database. Once again,
+        /// the listbox is repopulated if the user clicks yes. Displays an error message if 
+        /// there is no electronic selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void deleteElectCmd_Click(object sender, EventArgs e)
         {
             if( listBox1.SelectedIndex < 0 )

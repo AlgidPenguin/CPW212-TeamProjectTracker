@@ -11,9 +11,9 @@ namespace TeamProjectTracker
     {
      
         /// <summary>
-        /// 
+        /// Retrieves all the electronics currently registered in the database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List of all electronics</returns>
         public static List<Electronic> GetAllElectronics()
         {
             using (TrackingContext context = new TrackingContext())
@@ -27,10 +27,10 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// Adds a new electronic into the database
         /// </summary>
-        /// <param name="elect"></param>
-        /// <returns></returns>
+        /// <param name="elect">The electronic to add to the database</param>
+        /// <returns>Electronic that was added</returns>
         public static Electronic Add(Electronic elect)
         {
             using (TrackingContext context = new TrackingContext())
@@ -43,10 +43,10 @@ namespace TeamProjectTracker
         }
 
         /// <summary>
-        /// 
+        /// Updates an electronic that currently exists in the database
         /// </summary>
-        /// <param name="elect"></param>
-        /// <returns></returns>
+        /// <param name="elect">The electronic to update</param>
+        /// <returns>Electronic that was updated</returns>
         public static Electronic Update(Electronic elect)
         {
             using (TrackingContext context = new TrackingContext())
@@ -59,9 +59,9 @@ namespace TeamProjectTracker
             }
         }
         /// <summary>
-        /// 
+        /// Accesses the database and deletes the electronic that was passed in
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">The id of the electronic to delete</param>
         public static void Delete(int id)
         {
             using (TrackingContext context = new TrackingContext())
