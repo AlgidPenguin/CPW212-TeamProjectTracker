@@ -33,10 +33,20 @@ namespace TeamProjectTracker
         /// <param name="allElectronics">The list used to populate the listbox</param>
         private void populateList(List<Electronic> allElectronics)
         {
-            listBox1.Items.Clear();
-            foreach (Electronic elect in allElectronics)
+            productLstBox.Items.Clear();
+
+            foreach (String cat in ElectronicDb.GetAllCategories())
             {
-                listBox1.Items.Add(elect);
+                
+                productLstBox.Items.Add(Validation.casingWords(cat));
+
+                foreach (Electronic elect in allElectronics)
+                {
+                    if (elect.Category == cat)
+                    {
+                        productLstBox.Items.Add(elect);
+                    }
+                }
             }
         }
 
@@ -62,13 +72,13 @@ namespace TeamProjectTracker
         /// </summary>
         private void updateElectCmd_Click(object sender, EventArgs e)
         {
-            if ( listBox1.SelectedIndex < 0 )
+            if ( productLstBox.SelectedIndex < 0 )
             {
                 MessageBox.Show("You must choose a product to update.");
                 return;
             }
 
-            Electronic electToUpdate = listBox1.SelectedItem as Electronic;
+            Electronic electToUpdate = productLstBox.SelectedItem as Electronic;
             addElectFrm updateForm = new addElectFrm(electToUpdate);
             updateForm.ShowDialog();
 
@@ -84,13 +94,13 @@ namespace TeamProjectTracker
         /// </summary>
         private void deleteElectCmd_Click(object sender, EventArgs e)
         {
-            if( listBox1.SelectedIndex < 0 )
+            if( productLstBox.SelectedIndex < 0 )
             {
                 MessageBox.Show("You must select a product to delete.");
                 return;
             }
 
-            Electronic elecToDelete = listBox1.SelectedItem as Electronic;
+            Electronic elecToDelete = productLstBox.SelectedItem as Electronic;
 
             DialogResult result = MessageBox.Show(
                                     text: $"Are you sure you want to delete {elecToDelete.ProductId}:{elecToDelete.Manufacturer}:{elecToDelete.Name}",
