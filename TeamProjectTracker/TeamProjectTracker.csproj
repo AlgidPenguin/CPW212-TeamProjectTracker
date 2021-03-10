@@ -87,6 +87,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrackingContext.cs" />
+    <Compile Include="Validation.cs" />
     <EmbeddedResource Include="addElectFrm.resx">
       <DependentUpon>addElectFrm.cs</DependentUpon>
     </EmbeddedResource>

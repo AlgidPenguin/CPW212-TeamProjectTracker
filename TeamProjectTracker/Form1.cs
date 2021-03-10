@@ -34,10 +34,18 @@ namespace TeamProjectTracker
         private void populateList(List<Electronic> allElectronics)
         {
             listBox1.Items.Clear();
-            foreach (Electronic elect in allElectronics)
+            foreach (Electronic cat in allElectronics)
             {
-                listBox1.Items.Add(elect);
+                listBox1.Items.Add(cat.Category);
+                foreach (Electronic elect in allElectronics)
+                {
+                    if (elect.Category == cat.Category)
+                    {
+                        listBox1.Items.Add("     " + elect);
+                    }
+                }
             }
+
         }
 
         /// <summary>
