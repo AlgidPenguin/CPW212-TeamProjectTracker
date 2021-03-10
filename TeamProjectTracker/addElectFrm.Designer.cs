@@ -36,8 +36,8 @@ namespace TeamProjectTracker
             this.label4 = new System.Windows.Forms.Label();
             this.manufactTxt = new System.Windows.Forms.TextBox();
             this.priceTxt = new System.Windows.Forms.TextBox();
-            this.categoryTxt = new System.Windows.Forms.TextBox();
             this.addElectCmd = new System.Windows.Forms.Button();
+            this.categoryCbx = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -97,13 +97,6 @@ namespace TeamProjectTracker
             this.priceTxt.Size = new System.Drawing.Size(135, 20);
             this.priceTxt.TabIndex = 6;
             // 
-            // categoryTxt
-            // 
-            this.categoryTxt.Location = new System.Drawing.Point(116, 217);
-            this.categoryTxt.Name = "categoryTxt";
-            this.categoryTxt.Size = new System.Drawing.Size(135, 20);
-            this.categoryTxt.TabIndex = 7;
-            // 
             // addElectCmd
             // 
             this.addElectCmd.Location = new System.Drawing.Point(108, 262);
@@ -115,13 +108,21 @@ namespace TeamProjectTracker
             this.addElectCmd.UseVisualStyleBackColor = true;
             this.addElectCmd.Click += new System.EventHandler(this.addElectCmd_Click);
             // 
+            // categoryCbx
+            // 
+            this.categoryCbx.FormattingEnabled = true;
+            this.categoryCbx.Location = new System.Drawing.Point(115, 217);
+            this.categoryCbx.Name = "categoryCbx";
+            this.categoryCbx.Size = new System.Drawing.Size(136, 21);
+            this.categoryCbx.TabIndex = 10;
+            // 
             // addElectFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 363);
+            this.Controls.Add(this.categoryCbx);
             this.Controls.Add(this.addElectCmd);
-            this.Controls.Add(this.categoryTxt);
             this.Controls.Add(this.priceTxt);
             this.Controls.Add(this.manufactTxt);
             this.Controls.Add(this.label4);
@@ -131,6 +132,7 @@ namespace TeamProjectTracker
             this.Controls.Add(this.label1);
             this.Name = "addElectFrm";
             this.Text = "Add Electronic";
+            this.Load += new System.EventHandler(this.addElectFrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,7 +147,7 @@ namespace TeamProjectTracker
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox manufactTxt;
         private System.Windows.Forms.TextBox priceTxt;
-        private System.Windows.Forms.TextBox categoryTxt;
         private System.Windows.Forms.Button addElectCmd;
+        private System.Windows.Forms.ComboBox categoryCbx;
     }
 }
