@@ -57,7 +57,7 @@ namespace TeamProjectTracker
                 electToAdd.Name = nameTxt.Text;
                 electToAdd.Manufacturer = manufactTxt.Text;
                 electToAdd.Price = Convert.ToDouble(priceTxt.Text);
-                electToAdd.Category = categoryCbx.Text;
+                electToAdd.Category = Validation.casingWords(categoryCbx.Text);
 
                 ElectronicDb.Add(electToAdd);
             }
@@ -66,7 +66,7 @@ namespace TeamProjectTracker
                 existingElec.Name = nameTxt.Text;
                 existingElec.Manufacturer = manufactTxt.Text;
                 existingElec.Price = Convert.ToDouble(priceTxt.Text);
-                existingElec.Category = categoryCbx.Text;
+                existingElec.Category = Validation.casingWords(categoryCbx.Text);
 
                 ElectronicDb.Update(existingElec);
                 MessageBox.Show("Successfully updated item " + existingElec.Name);
@@ -85,7 +85,7 @@ namespace TeamProjectTracker
         {
             foreach (String toAdd in populateFromList)
             {
-                box.Items.Add(toAdd);
+                box.Items.Add(Validation.casingWords(toAdd));
             }
         }
     }

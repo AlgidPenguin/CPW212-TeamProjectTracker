@@ -29,7 +29,7 @@ namespace TeamProjectTracker
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.productLstBox = new System.Windows.Forms.ListBox();
             this.addElectCmd = new System.Windows.Forms.Button();
             this.updateElectCmd = new System.Windows.Forms.Button();
             this.deleteElectCmd = new System.Windows.Forms.Button();
@@ -37,12 +37,12 @@ namespace TeamProjectTracker
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(61, 10);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(176, 225);
-            this.listBox1.TabIndex = 0;
+            this.productLstBox.FormattingEnabled = true;
+            this.productLstBox.Location = new System.Drawing.Point(61, 10);
+            this.productLstBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.productLstBox.Name = "listBox1";
+            this.productLstBox.Size = new System.Drawing.Size(176, 225);
+            this.productLstBox.TabIndex = 0;
             // 
             // addElectCmd
             // 
@@ -85,7 +85,7 @@ namespace TeamProjectTracker
             this.Controls.Add(this.deleteElectCmd);
             this.Controls.Add(this.updateElectCmd);
             this.Controls.Add(this.addElectCmd);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.productLstBox);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -96,7 +96,7 @@ namespace TeamProjectTracker
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox productLstBox;
         private System.Windows.Forms.Button addElectCmd;
         private System.Windows.Forms.Button updateElectCmd;
         private System.Windows.Forms.Button deleteElectCmd;
