@@ -75,13 +75,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102020318423_Initial.cs" />
-    <Compile Include="Migrations\202102020318423_Initial.designer.cs">
-      <DependentUpon>202102020318423_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102100753016_test.cs" />
-    <Compile Include="Migrations\202102100753016_test.designer.cs">
-      <DependentUpon>202102100753016_test.cs</DependentUpon>
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Migrations\202103170505266_InventoryClassUpdate.cs" />
+    <Compile Include="Migrations\202103170505266_InventoryClassUpdate.designer.cs">
+      <DependentUpon>202103170505266_InventoryClassUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -94,11 +91,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102020318423_Initial.resx">
-      <DependentUpon>202102020318423_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102100753016_test.resx">
-      <DependentUpon>202102100753016_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202103170505266_InventoryClassUpdate.resx">
+      <DependentUpon>202103170505266_InventoryClassUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
